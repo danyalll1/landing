@@ -21,6 +21,11 @@ html{
 li {
       list-style-type: none; /* Убираем маркеры */
 }
+
+img{
+      max-width: 100%;
+}
+
 ul {
       margin: 0;
       padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
@@ -259,15 +264,18 @@ body {
 .evo{
       font-size: 13px;
       margin-bottom:  100px;
+      z-index: 10;
 }
 
 .evo-black{
       background-color: #363636;
       padding: 100px 0 50px 0;
       color: white;
+      z-index: 10;
 }
 .evo-black__inner{
       position: relative;
+      z-index: 10;
 }
 
 .evo-black__inner::before{
@@ -278,6 +286,7 @@ body {
       height: 213px;
       top: 210px;
       left: -144px;
+      z-index: 10;
 }
 .evo-black__inner::after{
       position: absolute;
@@ -287,6 +296,7 @@ body {
       height: 572px;
       top: 289px;
       left: -42px;
+      z-index: 10;
 }
 
 .evo-black__info{
@@ -335,6 +345,7 @@ body {
 .evo-white__inner{
       padding-top: 125px;
       position: relative;
+      z-index: 10;
 }
 
 
@@ -346,6 +357,7 @@ body {
       height: 257px;
       top: -38px;
       left: 366px;
+      z-index: 10;
 }
 .evo-white__inner::after{
       position: absolute;
@@ -355,6 +367,7 @@ body {
       height: 311px;
       top: 110px;
       left: 604px;
+      z-index: 10;
 }
 
 
@@ -559,8 +572,6 @@ transform: translateX(10px);
 }
 
 
-
-
 .social{
       display: flex;
       align-items: center;
@@ -573,3 +584,155 @@ transform: translateX(10px);
       align-items: center;
 }
 
+
+.menu-mobile{
+      display: none;
+}
+.menu-btn{
+      display: none;
+}
+
+
+@media (max-width: 1100px) {
+      .promo{
+            background-position: left center;
+      }
+      .menu-list{
+            display: none;
+      }
+      .menu-mobile{
+            display: flex;
+            align-items: center;
+            gap: 0 20px;
+      }
+      .logo-img{
+            width: 50px;
+      }
+      .title{
+            font-size: 64px;
+      }
+      .subtitle{
+            font-size: 42px;
+      }
+      .subtitle span{
+            font-size: 32px;
+      }
+}
+
+
+@media (max-width: 840px) {
+      .logo{
+            min-width: 50px;
+            z-index: 101;
+      }
+
+      .nav{
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+            position: fixed;
+            width: 100%;
+      }
+
+      .menu-btn{
+            right: 0;
+            top: 0;
+            margin: 30px 20px 0 0;
+            position: absolute;
+            min-width: 40px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: transparent;
+            border: none;
+            height: 30px;
+            cursor: pointer;
+            z-index: 101;
+      }
+      .menu-btn.menu--open span{
+            background-color: #9F6B08;
+      }
+
+      .menu-btn span{
+            height: 0.3em;
+            width: 100%;
+            background-color: #363636;
+      }
+      .menu-mobile{
+            opacity: 0;
+            transform: translateY(-150%);
+            transition: transform ease-in-out 0.2s;
+            z-index: 100;
+      }
+
+      .menu-mobile.menu--open{
+            opacity: 1;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            justify-content: space-between;
+            padding-top: 6.5%;
+            padding-bottom: 6.5%;
+            top:-50%;
+            left: -5%;
+            right: 0;
+            bottom: 0;
+
+            height: 50vh;
+            text-align: center;
+            background-color: #363636;
+            transform: translateY(0);
+            transition: transform ease-in-out 0.2s, opacity ease-in-out 0.2s;
+            z-index: 100;
+      }
+
+
+      .menu-link{
+            color: #9F6B08;
+            font-size: 3vh;
+            display: block;
+            transition: color linear 0.2s;
+      }
+      .menu-link:hover{
+            transition: color linear 0.2s;
+            color: #ec9e00;
+      }
+
+
+      .title{
+            font-size: 42px;
+      }
+      .subtitle{
+            font-size: 32px;
+      }
+      .subtitle span{
+            font-size: 22px;
+      }
+
+      .header{
+            padding-top:  0;
+      }
+
+      .info__part-textbox{
+            display: block;
+            padding-bottom: 15px;
+      }
+
+      .info__part{
+            display: block;
+      }
+      .info__part--second .info__text,
+      .info__part--third .info__text{
+            max-width: 100%;
+      }
+
+      .info__table{
+            width: 100%;
+      }
+
+      .info__part-img{
+            width: 100%;
+      }
+}

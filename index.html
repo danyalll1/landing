@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +13,8 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+    </script>
 </head>
 <body>
 <header class="header">
@@ -35,6 +38,36 @@
                 <img src="images/Logo.svg" alt="logo" class="logo-img">
             </a>
             <ul class="menu-list menu-right">
+                <li class="menu-item">
+                    <a href="#" class="menu-link">Купить билеты</a></li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">Смотреть онлайн</a></li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">Контакты</a></li>
+
+
+
+
+            </ul>
+            <button class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="menu-mobile">
+                <li class="menu-item">
+                    <a href="#" class="menu-link">О гонке</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">Трек</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">Lamborghini Super trofeo</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">Новости</a>
+                </li>
                 <li class="menu-item">
                     <a href="#" class="menu-link">Купить билеты</a></li>
                 <li class="menu-item">
@@ -69,7 +102,7 @@
 
         </div>
     </section>
-    <section class="info">
+<section class="info">
         <div class="container">
             <div class="info__part info__part--first">
                 <h3 class="info__title">СУПЕР ТРОФЕО МИРОВОЙ ФИНАЛ</h3>
@@ -331,7 +364,7 @@
                     <address class="contacts__address-address">
                         Sitio do Escampadinho, Mexilhoeira Grande, 8500-148 Portimao, Portugal
                     </address>
-                    <div id="map"></div>
+                    <div id="map" style="width: 454px; height: 253px"></div>
                 </div>
             </div>
             <div class="contacts__bot">
